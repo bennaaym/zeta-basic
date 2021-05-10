@@ -1,0 +1,55 @@
+### Features :
+    
+    * DATA TYPES:
+
+        * NUMBERS (FLOAT,INTEGER)
+        * STRING
+        * IMMUTABLE LISTS (HOMOGENEOUS,HETEROGENEOUS)
+
+    * BUILT-IN FUNCTIONS :
+        
+        * PRINT
+        * SUM (LIST)
+
+    * OPERATORS :
+        
+        * Arithmetic operators :
+            + : addition    (NUMBER + NUMBER) or (STRING + STRING) or (LIST + LIST) or (LIST + NUMBER)
+            - : substraction (NUMBER - NUMBER) or  (LIST - LIST) or (LIST - NUMBER)
+            * : multiplication (NUMBER * NUMBER) or (STRING * NUMBER) or (LIST * LIST) or (LIST * NUMBER)
+            / : division (NUMBER / NUMBER) or  (LIST / LIST) or (LIST / NUMBER)
+            % : modulo (NUMBER % NUMBER) or  (LIST % LIST) or (LIST % NUMBER)
+            //: floor division (NUMBER // NUMBER) or  (LIST // LIST) or (LIST // NUMBER)
+            **: power (NUMBER ** NUMBER) or  (LIST - LIST) or (LIST - NUMBER)
+
+        * Assignment operators :
+            = : LET variableName = NUMBER | STRING | LIST | EXPRESSION
+
+        * Comparison operators :
+            == : Equal  (DataType ==  DataType)
+            != : Not Equal (DataType != DataType)
+            < , <= : Less Than (or Equal) (NUMBER < NUMBER) or (STRING < STRING)
+            > , >= : Greater Than (or Equal) (NUMBER > NUMBER) or (STRING > STRING)
+
+        * Logical operators:
+
+            && : And (NUMBER && NUMBER) or (EXPRESSION && EXPRESSION)
+            || : Or (NUMBER || NUMBER) or (EXPRESSION || EXPRESSION)
+            ! : Not (!NUMBER) or (!EXPRESSION)
+
+        
+        * LOOPS : 
+
+            FOR .... DO ... 
+            WHILE ... DO ...
+
+        VARIABLES :
+
+            LET variableName = DataType | EXPRESSION
+
+
+
+
+
+
+            

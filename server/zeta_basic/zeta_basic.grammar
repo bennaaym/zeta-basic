@@ -1,0 +1,40 @@
+statement : NL* expression  (NL* expression)* NL*
+
+expression : KEYWORD:LET EQ expression 
+           : comparison-expression ((AND|NOT) comparison-expression)*
+
+comparison-expression : NOT comparison-expression
+                      : arithmetic-expression ((EE|LE|GE|LT|GT) arithmetic-expression)*
+
+arithmetic-expression : term((PLUS|MINUS)term)*
+
+term : term((MULT|DIV|MOD|FLOORDIV)term)*
+
+factor : (PLUS|MINUS) factor
+       : power
+
+power : atom (POW factor)*
+
+atom : BOOL|NUMBER|STRING|IDENTIFIER
+     : LPAREN expression RPAREN
+     : if-expression
+     : for-expression
+     : while-expression
+     : print-expression
+     : list-expression
+     : sum-expression 
+     : stringify-expression
+
+if-expression : KEYWORD:IF expression KEYWORD:THEN (KEYWORD:ELSE expression)?
+
+for-expression : KEYWORD:FOR IDENTIFIER EQ expression KEYWORD:TO expression (KEYWORD:STEP expression)? KEYWORD:THEN expression
+               
+while-expression : KEYWORD:WHILE expression THEN expression
+
+print-expression : KEYWORD:PRINT expression 
+
+list-expression : LSQUARE (expression (COMMA expression)*)? RQUARE 
+
+sum-expression : KEYWORD:SUM list-expression | IDENTIFIER
+
+stringify-expression : KEYWORD:STRINGIFY IDENTIFIER|BOOL|NUMBER|STRING|list-expression 
