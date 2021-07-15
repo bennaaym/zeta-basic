@@ -61,6 +61,7 @@ const Editor = ({name,theme,buttons,code,setCode}) => {
                         onChange={handleChange}
                         className ={`col-span-11  text-${theme.text} bg-${theme.editorBgColor2} pl-2 leading-6 outline-none resize-none`}
                         value={code}
+                        spellCheck='false'
                     >
                     </textarea>
                 </div>

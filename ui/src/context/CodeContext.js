@@ -22,7 +22,10 @@ const CodeContextProvide = ({children}) => {
                 break;
         }
         const newCode = code.substring(0,i+1)
-        axios.post('http://127.0.0.1:5000/api/input',{input:newCode})
+
+        const END_POINT = process.env.REACT_APP_INTERPRETER_API;
+        axios.post(END_POINT,{input:newCode})
+
         .then(res=>{
             const data = res.data['outputs']
             let out =''
@@ -32,6 +35,7 @@ const CodeContextProvide = ({children}) => {
             
             setOutput(out)
         })
+
         .catch(e=>{
             alert("not able to connect to the server, please try again")
         })

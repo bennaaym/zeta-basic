@@ -19,6 +19,7 @@ const Output = ({name ,theme, buttons,output}) => {
                         disabled
                         className ={`col-span-12  bg-${theme.editorBgColor2} pl-2 leading-6 outline-none resize-none`}
                         value={output}
+                        spellCheck='false'
                     >
                     </textarea>
                 </div>

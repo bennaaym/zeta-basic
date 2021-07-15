@@ -19,7 +19,7 @@ const Guide = ({theme}) => {
                         <div className={`text-${theme.text} leading-7 pl-7 `}>
                             <p>
                                 <strong className="text-gray-700 ">&#950; basic </strong>
-                                basic is a small interpreted programming language based on python. Its syntax is mainly inspired by the BASIC language.
+                                is a small interpreted programming language based on python. Its syntax is mainly inspired by the BASIC language.
                             </p>
                         </div>                        
                     </section>

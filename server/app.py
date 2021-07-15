@@ -12,8 +12,6 @@ cors = CORS(app, resources={r"/api/*"})
 @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 
 def input():
-    #output = process_input(request.get_json()['input'])
-
     try:
         output = process_input(request.get_json()['input'])
     except Exception as exception:
